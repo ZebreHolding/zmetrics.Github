@@ -161,25 +161,61 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #bloc-1 h1{
 	font-family: 'Open Sans';
 	font-weight: 600;
+	font-size: 36px;
 	line-height: 39px;
 }
-#bloc-5 h1{
+#bloc-1 h3{
+	font-size: 24px;
+}
+#bloc-1 a{
+	line-height: 21px;
+}
+#bloc-3 h1{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 50px;
 	line-height: 55px;
-	font-size: 38px;
+}
+#bloc-3 p{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 40px;
+}
+#bloc-4 h1{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 55px;
+}
+#bloc-4 p{
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 40px;
+}
+#bloc-5 h1{
 	font-family: 'Open Sans';
 	font-weight: 600;
+	font-size: 38px;
+	line-height: 55px;
 }
 #bloc-5 h3{
 	font-family: 'Open Sans';
 	font-weight: 400;
+	font-size: 24px;
+	line-height: 32px;
 }
 #bloc-7 h1{
 	font-family: 'Open Sans';
 	font-weight: 600;
+	font-size: 36px;
 }
 #bloc-7 p{
 	font-family: 'Open Sans';
 	font-weight: 400;
+	font-size: 24px;
+	line-height: 32px;
 }
 
 /* = NavBar
@@ -360,6 +396,15 @@ button{
 }
 
 
+/* = Text Widths
+-------------------------------------------------------------- */
+.text-w-80{
+	max-width:80%;
+}
+.text-center.text-w-sm, .text-center.text-w-md, .text-center.text-w-lg, .text-center.text-w-90, .text-center.text-w-80, .text-center.text-w-70, .text-center.text-w-60, .text-center.text-w-50{
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 .panel-sq, .panel-sq .panel-heading, .panel-sq .panel-footer{
@@ -579,6 +624,9 @@ h4{
 .img-grid{
 	padding:5px 5px 5px 5px;
 }
+.carousel-align{
+	padding-top:5%;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -588,9 +636,6 @@ h4{
 .bgc-black{
 	background-color:#000000;
 }
-.bgc-white{
-	background-color:#ffffff;
-}
 .bgc-persian-red{
 	background-color:#D32F2F;
 }
@@ -599,6 +644,9 @@ h4{
 }
 .bgc-orange-ryb{
 	background-color:#FF9500;
+}
+.bgc-white{
+	background-color:#ffffff;
 }
 /* Text colour styles */
 
@@ -812,6 +860,97 @@ h4{
         background-size: auto 200%;
     }
 }
+
+@media (max-width: 768px){
+	.button, .mobile .button{
+	font-size:14px;
+	padding:5px 20px 5px 20px;
+}
+ 
+/* Mobile Text Margin Offsets */
+.mg-sm-sm{
+	margin-top:10px;
+	 margin-bottom:5px;
+}
+.mg-md-sm{
+	margin-top:10px;
+	 margin-bottom:20px;
+}
+#bloc-1 h1{
+	font-size: 28px;
+	line-height: 28px;
+}
+#bloc-1 h3{
+	font-size: 16px;
+}
+#bloc-1 a{
+	line-height: 28px;
+}
+#bloc-3 h1{
+	font-size: 32px;
+	line-height: 35px;
+}
+#bloc-3 p{
+	font-size: 18px;
+	line-height: 28px;
+}
+#bloc-4 h1{
+	font-size: 32px;
+	line-height: 35px;
+}
+#bloc-4 p{
+	font-size: 18px;
+	line-height: 28px;
+}
+#bloc-5 h1{
+	font-size: 32px;
+	line-height: 40px;
+}
+#bloc-5 h3{
+	font-size: 18px;
+	line-height: 28px;
+}
+#bloc-7 h1{
+	font-size: 32px;
+}
+#bloc-7 p{
+	font-size: 18px;
+}
+}
+/* Drop Down Navigation */
+@media (min-width: 767px) and (max-width: 768px){
+	
+.mini-nav .special-dropdown-nav .site-navigation{
+	display: block;
+	position: absolute;
+	top: 80%;
+	z-index: 1000;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.mini-nav .special-dropdown-nav .site-navigation li{
+	width:100%;
+}
+.special-dropdown-nav.collapsing{
+	transition: height 0.001s;
+}
+.mini-nav .special-dropdown-nav .site-navigation li a{
+	color: rgba(0,0,0,.6)!important;
+}
+ }
 @media (max-width: 420px){
 	.device-bloc-text{
 	width:100%;
@@ -830,5 +969,61 @@ h4{
 .device-bloc-button{
 	width:100%;
 }
- }
+ 
+/* Mobile Text Margin Offsets */
+.mg-sm-xs{
+	margin-top:10px;
+	 margin-bottom:5px;
+}
+.mg-md-xs{
+	margin-top:10px;
+	 margin-bottom:20px;
+}
+#bloc-1 h1{
+	font-size: 16px;
+	line-height: 18px;
+}
+#bloc-1 h3{
+	font-size: 24px;
+}
+#bloc-1 a{
+	line-height: 21px;
+}
+#bloc-3 h1{
+	font-size: 24px;
+	line-height: 26px;
+}
+#bloc-3 p{
+	font-size: 16px;
+	line-height: 24px;
+}
+#bloc-4 h1{
+	font-size: 24px;
+	line-height: 26px;
+}
+#bloc-4 p{
+	font-size: 16px;
+	line-height: 24px;
+}
+#bloc-5 h1{
+	font-size: 24px;
+	line-height: 26px;
+}
+#bloc-5 h3{
+	font-size: 16px;
+	line-height: 24px;
+}
+#bloc-7 h1{
+	font-size: 24px;
+}
+#bloc-7 p{
+	font-size: 16px;
+	line-height: 24px;
+}
+/* = Text Mobile Alignment Classes
+-------------------------------------------------------------- */
+.text-center-xs{
+	text-align:center;
+}
+}
 
