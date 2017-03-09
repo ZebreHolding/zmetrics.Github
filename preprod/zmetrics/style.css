@@ -39,14 +39,64 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 /* Sizes */
 
-.bloc-xxl{
-	padding:200px 50px;
-}
 .bloc-lg{
 	padding:100px 50px;
 }
 .bloc-md{
 	padding:50px;
+}
+.bloc-sm{
+	padding:20px 50px;
+}
+
+/* = Full Screen Blocs 
+-------------------------------------------------------------- */
+
+.bloc-fill-screen{
+	padding-top:0;
+	position: relative;
+	height: inherit;
+}
+.bloc-fill-screen > .container{
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+}
+.bloc-fill-screen.bloc-group .bloc{
+	vertical-align: middle!important;
+}
+.bloc-fill-screen .fill-bloc-top-edge, .bloc-fill-screen .fill-bloc-bottom-edge{
+	position: absolute;
+	margin: 20px auto;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	transform: none;
+}
+.bloc-fill-screen .fill-bloc-top-edge{
+	top:0;
+}
+.bloc-fill-screen .fill-bloc-bottom-edge{
+	top: initial;
+	bottom: 20px;
+}
+.blocs-hero-btn-dwn{
+	width: 58px;
+	height: 58px;
+	display: block;
+	margin:0 auto;
+	line-height: 58px;
+	padding: 0;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 18px;
+	color: rgba(255,255,255,.8);
+	background: rgba(0,0,0,.6);
+	border:0;
+}
+.blocs-hero-btn-dwn:hover{
+	color: rgba(255,255,255,1);
 }
 
 /* = Full Width Blocs 
@@ -159,21 +209,26 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 /* Bloc text custom styling */
 
 #bloc-1 h1{
-	font-family: 'Open Sans';
-	font-weight: 600;
-	font-size: 36px;
+	font-family: Muli;
+	font-weight: 800;
+	font-size: 38px;
 	line-height: 39px;
 }
 #bloc-1 h3{
+	font-family: 'Open Sans';
+	font-weight: 400;
 	font-size: 24px;
 }
 #bloc-1 a{
 	line-height: 21px;
 }
 #bloc-3 h1{
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 50px;
+	font-size: 38px;
+}
+#bloc-3 h1{
+	font-family: Muli;
+	font-weight: 800;
+	font-size: 38px;
 	line-height: 55px;
 }
 #bloc-3 p{
@@ -183,9 +238,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 	line-height: 40px;
 }
 #bloc-4 h1{
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 50px;
+	font-size: 38px;
+}
+#bloc-4 h1{
+	font-family: Muli;
+	font-weight: 800;
+	font-size: 38px;
 	line-height: 55px;
 }
 #bloc-4 p{
@@ -194,9 +252,12 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 	font-size: 24px;
 	line-height: 40px;
 }
+#bloc-4 img{
+	line-height: 20px;
+}
 #bloc-5 h1{
-	font-family: 'Open Sans';
-	font-weight: 600;
+	font-family: Muli;
+	font-weight: 800;
 	font-size: 38px;
 	line-height: 55px;
 }
@@ -204,18 +265,22 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 	font-family: 'Open Sans';
 	font-weight: 400;
 	font-size: 24px;
-	line-height: 32px;
+	line-height: 40px;
 }
 #bloc-7 h1{
-	font-family: 'Open Sans';
-	font-weight: 600;
-	font-size: 36px;
+	font-family: Muli;
+	font-weight: 800;
+	font-size: 38px;
+	line-height: 55px;
 }
 #bloc-7 p{
 	font-family: 'Open Sans';
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 32px;
+}
+#bloc-8 h1{
+	font-size: 42px;
 }
 
 /* = NavBar
@@ -383,6 +448,14 @@ button{
 	outline: none!important;
 }
 
+.a-btn{
+	padding: 6px 10px 6px 0;
+	line-height: 1.42857143;
+	display:inline-block;
+}
+.text-center .a-btn{
+	padding: 6px 0;
+}
 .btn .caret{
 	margin:0 0 0 5px}.dropdown a .caret{
 	margin:0 0 0 5px}.btn-dropdown .dropdown-menu .dropdown{
@@ -391,6 +464,9 @@ button{
 
 /* = Icons
 -------------------------------------------------------------- */
+.icon-sm{
+	font-size:18px!important;
+}
 .icon-md{
 	font-size:30px!important;
 }
@@ -490,26 +566,6 @@ iframe{
 	font-size: 14px;
 	opacity: 1;
 }
-/* = iPhone 5 Devices
--------------------------------------------------------------- */
-
-.blocsapp-device-iphone5{
-	background-size: 384px 803px;
-	background-repeat: no-repeat;
-	padding-top:120px;
-	display: block;
-	width:384px;
-	height:803px;
-	margin: 0 auto;
-}
-.blocsapp-device-iphone5 img{
-	width: 320px;
-	height: 568px;
-	margin: 0 auto;
-}
-.blocsapp-device-iphone5.iphone-silver{
-	background-image:url("img/Apple-iPhone-5s-Silver.png");
-}
 
 /* = Custom Styling
 -------------------------------------------------------------- */
@@ -534,25 +590,25 @@ h1{
 }
 .button{
 	border-radius:80px 80px 80px 80px;
-	font-family:"Open Sans";
-	font-weight:400;
+	font-family:"Muli";
+	font-weight:800;
 	font-size:16px;
 	padding:10px 30px 10px 30px;
 }
-.h4{
+.Nav-menu{
 	font-family:"Open Sans";
 }
-.h4:active{
-	font-family:"Open Sans";
-	font-weight:400;
-	color:#FFFFFF!important;
-}
-.h4:hover{
+.Nav-menu:active{
 	font-family:"Open Sans";
 	font-weight:400;
 	color:#FFFFFF!important;
 }
-h4{
+.Nav-menu:hover{
+	font-family:"Open Sans";
+	font-weight:400;
+	color:#FFFFFF!important;
+}
+.Nav-menu{
 	font-weight:400;
 }
 .device-bloc-icon-phone{
@@ -584,11 +640,6 @@ h4{
 	text-align:center;
 	font-weight:lighter;
 }
-.menu-selected{
-	text-decoration:underline!important;
-	font-family:"Open Sans";
-	font-weight:400;
-}
 .subscribe{
 	color:#333333!important;
 	font-family:"Open Sans";
@@ -601,9 +652,6 @@ h4{
 .padding-header{
 	padding-top:10px;
 	padding-bottom:10px;
-}
-.footer-height{
-	height:50px;
 }
 .footer-position{
 	padding-left:50px;
@@ -626,6 +674,28 @@ h4{
 }
 .carousel-align{
 	padding-top:5%;
+}
+.title-space{
+	padding-top:7%;
+}
+.nav-menu{
+	text-transform:none;
+	text-decoration:none;
+	background-color:#FFFFFF;
+}
+.teams{
+	text-shadow:0px 0px 0px #000000;
+}
+.teams:hover{
+	box-shadow:0px 0px 20px #000000;
+}
+.link404{
+	font-family:"Muli";
+	font-weight:800;
+	font-size:24px;
+	text-transform:none;
+	color:#D32F2F!important;
+	text-decoration:underline!important;
 }
 
 /* = Colour
@@ -685,6 +755,9 @@ h4{
 
 /* Bloc image backgrounds */
 
+.bg-Foot{
+	background-image:url("img/Foot.png");
+}
 
 
 
@@ -866,7 +939,15 @@ h4{
 	font-size:14px;
 	padding:5px 20px 5px 20px;
 }
+.title-space, .mobile .title-space{
+	padding-top:5%;
+}
  
+/* Tablet Row Margin Offsets */
+.voffset-clear-sm{
+	margin-top:0;
+}
+
 /* Mobile Text Margin Offsets */
 .mg-sm-sm{
 	margin-top:10px;
@@ -888,27 +969,29 @@ h4{
 }
 #bloc-3 h1{
 	font-size: 32px;
+}
+#bloc-3 h1{
+	font-size: 32px;
 	line-height: 35px;
 }
 #bloc-3 p{
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 }
 #bloc-4 h1{
-	font-size: 32px;
 	line-height: 35px;
 }
 #bloc-4 p{
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 16px;
+	line-height: 24px;
 }
 #bloc-5 h1{
 	font-size: 32px;
-	line-height: 40px;
+	line-height: 35px;
 }
 #bloc-5 h3{
 	font-size: 18px;
-	line-height: 28px;
+	line-height: 24px;
 }
 #bloc-7 h1{
 	font-size: 32px;
@@ -980,14 +1063,17 @@ h4{
 	 margin-bottom:20px;
 }
 #bloc-1 h1{
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 18px;
 }
 #bloc-1 h3{
-	font-size: 24px;
+	font-size: 12px;
 }
 #bloc-1 a{
 	line-height: 21px;
+}
+#bloc-3 h1{
+	font-size: 24px;
 }
 #bloc-3 h1{
 	font-size: 24px;
@@ -999,14 +1085,20 @@ h4{
 }
 #bloc-4 h1{
 	font-size: 24px;
+}
+#bloc-4 h1{
+	font-size: 24px;
 	line-height: 26px;
 }
 #bloc-4 p{
 	font-size: 16px;
 	line-height: 24px;
 }
+#bloc-4 img{
+	line-height: 24px;
+}
 #bloc-5 h1{
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 26px;
 }
 #bloc-5 h3{
