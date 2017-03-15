@@ -56,7 +56,7 @@
 <div class="bloc tc-white bgc-persian-red" id="bloc-3">
 	<div class="container bloc-lg">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-5">
 				<h1 class=" text-center-xs mg-lg title-space hidden-xs hidden-sm">
 					<br>
 				</h1>
@@ -67,7 +67,7 @@
 					Compete with other supporters by correctly predicting team lineups and assessing player performance. Collect and redeem points on your way to the top.
 				</p>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-7">
 				<img src="img/2phones.png" class="img-responsive center-block" alt="LineupScreens" />
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 <div class="bloc tc-white bgc-rich-electric-blue" id="bloc-4">
 	<div class="container bloc-lg">
 		<div class="row voffset-clear-xs row-no-gutters">
-			<div class="col-sm-5">
+			<div class="col-sm-4">
 				<h1 class=" text-center-xs mg-lg title-space hidden-xs hidden-sm">
 					<br>
 				</h1>
@@ -90,7 +90,7 @@
 					Follow your team from every angle with news, blogs, podcasts and player ratings all at your fingertips. zmetrics gives fans of the Premier League true 360° insight.
 				</p>
 			</div>
-			<div class="col-sm-7">
+			<div class="col-sm-8">
 				<img src="img/3Screens.png" class="img-responsive " alt="AppScreens" />
 			</div>
 		</div>
@@ -109,9 +109,13 @@
 				<h3 class="mg-md h3  text-center tc-white text-w-80">
 					Subscribe and we&rsquo;ll give you access to the zmetrics BETA version as soon as it&rsquo;s available.
 				</h3>
+				
+					<button id="open-popup">Subscribe</button>
+					
+				
 				<div class="text-center">
-					<a href="index.html" class="btn btn-lg button subscribe btn-blanched-almond">I WANT IN</a>
-				</div>
+						<a href="#" class="btn btn-lg button subscribe btn-blanched-almond " id="open-popup">I WANT IN</a>
+					</div>
 			</div>
 		</div>
 	</div>
@@ -228,6 +232,15 @@
 </div>
 <!-- Main container END -->
     
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
+<script type="text/javascript">
+function showMailingPopUp() {
+	require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"7476daa97aba0f8b4e938e01a","lid":"0f098ac517"}) })
+    document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+};
+
+document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+</script>
 </body>
 </html>
